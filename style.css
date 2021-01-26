@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* 
+日本語を入れておかないとTerapad読み込み時にutf-8で認識されないんですよね
+ */
+
+body {
+      background-color: #f0ffff;
+      background-image: url("back.png");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center center;
+      font-family: "游ゴシック","ヒラギノ角ゴ ProN","メイリオ","MS Pゴシック","sans-serif";
+	  text-align: center;
+}
+h1 {
+	color: #191970;
+    background: #dfefff;
+    box-shadow: 0px 0px 0px 5px #dfefff;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+}
+
+a {
+	font-size: 30pt;
+}
+.hello {
+	color: #F39;
+	margin-bottom: 2000px;
+}
+
+.contents_header{
+	background-color: #06738F;
+	height: 100px;
+	width: 600px;
+}
+
+.contents_strong{
+	font-size: 20pt;
+	color: #d53205;
+	margin: 100px;
+}
+

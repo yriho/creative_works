@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+	<title>じゃんけん</title>
+</head>
+<body>
+
+<h1>じゃんけん</h1>
+
+
+
+
+<script>
+function janken(myhand) {
+	var hand = ["ぐー","ちょき","ぱー"]; // 手の配列
+	var aihand = Math.floor(3*Math.random()); // CPUが出す手を決める
+	var result = ""; // 変数の初期化
+	if( myhand == 0 ) { // 自分がぐーのとき
+		if( aihand == 0 ) { // 相手もぐーなら
+			result = "ひきわけ";
+		} else if( aihand == 1 ) { // 相手がぐーでなくてちょきなら
+			result = "かち";
+		} else { // それら以外、つまり相手がぱーなら
+			result = "まけ";
+		}
+    }
+    
+	if( myhand ==1 ) { // 自分がちょきのとき
+	    if( aihand == 0 ) { // 相手がぐーなら
+	        result = "まけ";
+	    } else if( aihand == 1) { // 相手がぐーでなくてちょきなら
+	        result = "ひきわけ";
+	    } else if( aihand == 2) { // それら以外、つまり相手がぱーなら
+	       result = "かち";
+	    }
+	}
+	
+	if( myhand ==2 ) { // 自分がぱーのとき
+	    if( aihand ==0 ) { //相手がぐーなら
+	        result = "かち";
+	    } else if( aihand == 1) { // 相手がぐーでなくてちょきなら
+	        result = "まけ";
+	    } else if( aihand == 2) { // それら以外、つまり相手がぱーなら
+	        result = "ひきわけ";
+	    }
+	}
+
+	// 結果表示
+	alert("自分の手："+hand[myhand]+"\n相手の手："+hand[aihand]+"\n結果："+result);
+}
+</script>
+
+<form>
+<input type="image" value="ぐー" onclick="janken(0)" src="janken_gu.png">
+<input type="image" value="ちょき" onclick="janken(1)" src="janken_choki.png">
+<input type="image" value="ぱー" onclick="janken(2)" src="janken_pa.png">
+</form>
+
+ <p>
+  <a href="home.html" class="btn btn-border-shadow btn-border-shadow--radius">Homeにもどる</a>
+  </p>
+  
+</body>
+</html>
+
